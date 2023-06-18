@@ -1,22 +1,18 @@
 <?php
 class person
 {
-    function __construct($name="No name", $age=22)
-    {
-        $this->name = $name;
-        $this->age = $age;
-    }
-    function show()
-    {
-        echo $this->name . "_" . $this->age;
-    }
+    function __construct($name,$age){
+       $this->name=$name;
+       $this->age=$age;
 
+    }
+public function show_user_data()
+{
+ echo  "User name is " .$this->name ." and user age is ".$this->age;
 }
-$person = new person("Mahek", 22);
-$person->show();
+}
+$person=new person('mahak',22);
+$person->show_user_data();
 
-$a=5;
-$b=10;
-echo $a=$b;
 
 ?>
