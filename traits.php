@@ -17,7 +17,7 @@ class base
 {
     use hello{
    // hello::sayhello insteadof bye; //mySayHello->except this
-    bye::sayhello as public; //rename function
+   hello::sayhello as public newhello; //rename function
     }
     // public function sayhello()
     // {
@@ -33,8 +33,8 @@ class base
 //     }
 // }
 $test = new base();
-$test->sayhello();
-$test->mySayHello();
+$test->newhello();
+// $test->mySayHello();
 // $test->saybye();
 // echo "<br>";
 // $test2 = new base2();
