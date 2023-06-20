@@ -1,32 +1,44 @@
 <?php
 trait hello
 {
-    public function sayhello()
+    private function sayhello()
     {
-        echo "hello";
+        echo "hello from trait";
     }
 }
-trait bye
-{
-    public function saybye()   
-    {
-        echo "bye";
-    }
-}
+// trait bye
+// {
+//     public function sayhello()   
+//     {
+//         echo "bye";
+//     }
+// }
 class base
 {
-    use hello, bye;
+    use hello{
+   // hello::sayhello insteadof bye; //mySayHello->except this
+    bye::sayhello as public; //rename function
+    }
+    // public function sayhello()
+    // {
+    //     echo "hello from base class";
+    // }
 }
-class base2
-{
-    use hello, bye;
-}
+// class child extends base
+// {
+//     use hello;
+//     public function sayhello()
+//     {
+//         echo "hello from child class";
+//     }
+// }
 $test = new base();
 $test->sayhello();
-$test->saybye();
-echo "<br>";
-$test2 = new base2();
-$test2->sayhello();
-$test2->saybye();
+$test->mySayHello();
+// $test->saybye();
+// echo "<br>";
+// $test2 = new base2();
+// $test2->sayhello();
+// $test2->saybye();
 
 ?>
