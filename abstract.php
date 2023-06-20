@@ -1,17 +1,17 @@
 <?php
-abstract class parentclass
-{
-    abstract protected function cals($a, $b);
+abstract class parent_class{
+
+abstract protected function calc($a,$b);
+
 }
-class childclass extends parentclass
-{
-    public function cals($a, $b)
-    {
-       echo $a+$b;
+class Child_class extends parent_class{
+    public function  calc($a,$b){
+        echo $a+$b;
     }
 }
-$test = new childclass();
-$test->cals(20,3);
+$test=new Child_class();
+$test->calc(2,4);
+
 /*
 we can use this type of class this type of project
 personal_info
