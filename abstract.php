@@ -1,17 +1,24 @@
 <?php
-abstract class parent_class{
-
-abstract protected function calc($a,$b);
-
-}
-class Child_class extends parent_class{
-    public function  calc($a,$b){
-        echo $a+$b;
+abstract class base
+{
+    function __construct($a, $b)
+    {
+        $this->a = $a;
+        $this->b = $b;
     }
+    abstract public function sum();
 }
-$test=new Child_class();
-$test->calc(2,4);
+class child extends base
+{
+    //function to override the parent method.
+    public function sum()
+    {
+        return ($this->a + $this->b);
+    }
 
+}
+$bs=new child(12,23);
+echo "sum is " .$bs->sum()."<br/>";
 /*
 we can use this type of class this type of project
 personal_info

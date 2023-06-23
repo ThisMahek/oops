@@ -1,4 +1,10 @@
 <?php
+
+//class a base 
+//class b derived 
+//trait a  
+
+//function sum
 trait hello
 {
     private function sayhello()
@@ -6,18 +12,18 @@ trait hello
         echo "hello from trait";
     }
 }
-// trait bye
-// {
-//     public function sayhello()   
-//     {
-//         echo "bye";
-//     }
-// }
+trait bye
+{
+    public function sayhello()   
+    {
+        echo "bye";
+    }
+}
 class base
 {
     use hello{
-   // hello::sayhello insteadof bye; //mySayHello->except this
-   hello::sayhello as public newhello; //rename function
+    hello::sayhello insteadof bye; //mySayHello->except this
+    hello::sayhello as public newhello; //rename function
     }
     // public function sayhello()
     // {

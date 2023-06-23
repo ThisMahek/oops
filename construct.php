@@ -1,18 +1,17 @@
 <?php
-class person
+class calculation
 {
-    function __construct($name,$age){
-       $this->name=$name;
-       $this->age=$age;
-
+    function __construct($a,$b){
+        $this->a=$a;
+        $this->b=$b;
     }
-public function show_user_data()
-{
- echo  "User name is " .$this->name ." and user age is ".$this->age;
+    function sum(){
+        return ($this->a+$this->b);
+    }
 }
-}
-$person=new person('mahak',22);
-$person->show_user_data();
-
+$test=new calculation(12,12);
+echo $test->sum();
+exit;
+echo die("exit");
 
 ?>

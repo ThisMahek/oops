@@ -1,17 +1,13 @@
 <?php
-class calcultion
-{
-public $a,$b,$c;
-public function sum()
-{
-    $this->c=$this->a+$this->b;
-    return $this->c;
+class calc{
+    public $a,$b;
+    function sum(){
+        return ($this->a+$this->b);
+    }
 }
-}
-
-$sum=new calcultion();
-$sum->a=40;
-$sum->b=20;
-echo $sum->sum();
+$cal=new calc();
+$cal->a=12;
+$cal->b=12;
+echo $cal->sum();
 
 ?>
